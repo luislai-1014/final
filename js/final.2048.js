@@ -196,7 +196,7 @@
             }
             if (gameOver()) {
                 isGameOver = true;
-                alert("Game Over");
+                alert("遊戲結束，按F5重新整理或點選右下方按鈕重新遊戲");
             }
         }
 
