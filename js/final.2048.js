@@ -72,7 +72,7 @@
          * @param value
          */
         function createBox(value) {
-            //Check if there are spaces for a new box or not
+            //確認有沒有數字在
             var emptyMatrix = 0;
             for (var i = 0; i < matrix.length; i++) {
                 if (!matrix[i].taken) {
