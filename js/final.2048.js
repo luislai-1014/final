@@ -12,11 +12,10 @@
                 left: 'left'
             },
 
-            holder = {}, //Game outer holder
-            content = {}, //Game inner container
-
-            matrix = [], //For the logic behind
-            boxes = [], //
+            holder = {}, 
+            content = {}, 
+            matrix = [], 
+            boxes = [], 
 
             isCheating = 0,
             isGameOver = false;
