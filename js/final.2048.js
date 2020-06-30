@@ -64,15 +64,7 @@
             _this.html(holder);
         }
 
-        /**
-         * Just for fun.
-         * Reset the game and place a 4096 box on the board.
-         */
-        function cheat() {
-            resetGame();
-            createBox(4096);
-        }
-
+        
         /**
          * Create a box and add to game
          * Takes 1 or 0 param.
