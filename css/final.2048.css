@@ -98,3 +98,40 @@
 .darkmode-layer, .darkmode-toggle {
     z-index: 500;
   }
+#f5{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-image: url(https://previews.123rf.com/images/blankstock/blankstock1401/blankstock140101303/25355724-repeat-icon-refresh-symbol-loop-sign-round-colourful-11-buttons-vector.jpg);
+    background-size: 630%;
+    background-position-x: -126px;
+    background-position-y: 56px;
+}
+.a{
+
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: inline-block;
+}
+#dark{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-image: url(https://cdn6.aptoide.com/imgs/b/a/3/ba3a557d043e1ef63913840d0f12239b_icon.png?w=160);
+    background-size: 130%;
+    background-position-x: -7px;
+    background-position-y: -8px;
+    position: relative;
+    left: 100px;
+    top: 20px;
+}
+.darkmode-layer{
+top: 40px;
+left: 100px;
+}
+
+.darkmode-toggle{
+top: 40px;
+left: 100px;
+}
