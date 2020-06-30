@@ -95,3 +95,6 @@
 .holder2048>.container>.box[value='8192'] {
     background-color: #FF00FF
 }
+.darkmode-layer, .darkmode-toggle {
+    z-index: 500;
+  }
