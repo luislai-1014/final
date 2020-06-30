@@ -11,7 +11,7 @@
             options = $.extend(defaults, _options),
 
             dir = {
-                up: 'up, shift',
+                up: 'up',
                 right: 'right',
                 down: 'down',
                 left: 'left'
