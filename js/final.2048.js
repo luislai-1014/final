@@ -1,10 +1,5 @@
+
 (function ($) {
-    /**
-     * User options
-     */
-    var defaults = {
-        delay: 100 //滑動速度
-    };
 
     $.fn.init2048 = function (_options) {
         var _this = this,
@@ -21,7 +16,7 @@
             content = {}, //Game inner container
 
             matrix = [], //For the logic behind
-            boxes = [], //Boxes storage
+            boxes = [], //
 
             isCheating = 0,
             isGameOver = false;
@@ -30,7 +25,7 @@
         bind();
 
         /**
-         * Restart the game by recreate all DOM elements.
+         *重製DOM的elements.
          */
         function resetGame() {
             //Reset the props
@@ -38,12 +33,12 @@
             matrix = [];
             isCheating = 0;
             isGameOver = false;
-            //Recreate DOM elements
+            
             holder = $('<div>').addClass('holder2048');
             content = $('<div>').addClass('container').appendTo(holder);
             for (var i = 0; i < 4; i++) {
                 for (var j = 0; j < 4; j++) {
-                    //Reset matrix
+                    
                     matrix[i * 4 + j] = {
                         top: i * 70,
                         left: j * 70,
@@ -64,15 +59,14 @@
             _this.html(holder);
         }
 
-        
+
+
         /**
-         * Create a box and add to game
-         * Takes 1 or 0 param.
-         *
+         * 創新數字
          * @param value
          */
         function createBox(value) {
-            //確認有沒有數字在
+            //Check if there are spaces for a new box or not
             var emptyMatrix = 0;
             for (var i = 0; i < matrix.length; i++) {
                 if (!matrix[i].taken) {
@@ -111,7 +105,7 @@
         }
 
         /**
-         * Combine 2 boxes into 1
+         * 結合兩個盒子
          * @param source
          * @param target
          * @param value
@@ -142,7 +136,7 @@
         }
 
         /**
-         * Check if game over
+         * 確認遊戲是否結束
          * @returns {boolean}
          */
         function gameOver() {
@@ -187,13 +181,13 @@
                 createBox();
             }
             if (gameOver()) {
-                isGameOver = true;
-                alert("遊戲結束，按F5重新整理或點選右下方按鈕重新遊戲");
+                isGameOver = true; //彈出視窗
+                alert("遊戲結束，按F5重新整理或點選右方按鈕重新遊戲");
             }
         }
 
         /**
-         * Bind keyboard and screen touch events to game
+         *連結上下左右鍵37~40 
          */
         function bind() {
             $(window).keydown(function (event) {
@@ -249,17 +243,13 @@
         }
 
         /**
-         * [WARNING] This method is ugly enough for now. Waiting for refactor.
-         *
-         * Make a single game move.
-         * Takes 1 param.
-         *
+         * 移動
          * @param dir
          * @returns {boolean}
          */
         function run(dir) {
             var isMoved = false; //This is to indicate that if the game actually moved after calling this function
-            var i, j, k, empty, _empty, position, value1, value2, temp; //Junks
+            var i, j, k, empty, _empty, position, value1, value2, temp; 
             //Reset the matrix attr 'combined' before moving
             for (i = 0; i < 16; i++) {
                 matrix[i].combined = false;
@@ -539,4 +529,10 @@
             return isMoved;
         }
     }
+
+    var defaults = {
+        delay: 100 //滑動速度
+    };
+
 })(jQuery);
+
