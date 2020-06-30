@@ -1,13 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html/>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="jquery-3.5.1.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <title>2048</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" href="css/final.2048.css" />
 </head>
+
 <body>
-     <t>aaaa</t>
+    <div class="introduce"></div>
+
+    <div class="container text-center" id="2048"></div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="js/final.2048.js"></script>
+    
+    
+    <script>
+        $(document).ready(function () {
+            $("#2048").init2048();
+        });
+    </script>
+    
 </body>
+
 </html>
