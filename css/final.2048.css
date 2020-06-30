@@ -1,7 +1,10 @@
 .introduce{
-    width: 100px;
-    height: 100px;
-    position: absolute;
+    width: 200vmin;
+    height: 5vmin;
+    position: relative;
+    top: 10px;
+    left: 600px;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .holder2048 {
@@ -9,7 +12,7 @@
     height: 380px;
     position: relative;
     margin: 0 auto;
-}
+    }
 
 .holder2048>.container {
     width: 280px;
@@ -45,7 +48,7 @@
 }
 
 .holder2048>.container>.box[value='2'] {
-    background-color: #FFF8D7
+    background-color: #fff8d7
 }
 
 .holder2048>.container>.box[value='4'] {
@@ -89,15 +92,16 @@
 }
 
 .holder2048>.container>.box[value='4096'] {
-    background-color: #00FFFF
+    background-color: #00c3ff
 }
 
 .holder2048>.container>.box[value='8192'] {
-    background-color: #FF00FF
+    background-color: #e91111
 }
 .darkmode-layer, .darkmode-toggle {
     z-index: 500;
   }
+
 #f5{
     width: 48px;
     height: 48px;
@@ -106,6 +110,9 @@
     background-size: 630%;
     background-position-x: -126px;
     background-position-y: 56px;
+    top: -20px;
+    left: 1175px;
+    position: relative;
 }
 .a{
 
@@ -115,16 +122,16 @@
     display: inline-block;
 }
 #dark{
-    width: 48px;
-    height: 48px;
+    width: 47px;
+    height: 47px;
     border-radius: 50%;
     background-image: url(https://cdn6.aptoide.com/imgs/b/a/3/ba3a557d043e1ef63913840d0f12239b_icon.png?w=160);
     background-size: 130%;
     background-position-x: -7px;
     background-position-y: -8px;
     position: relative;
-    left: 100px;
-    top: 20px;
+    left: 1175px;
+    top: -540px;
 }
 .darkmode-layer{
 top: 40px;
@@ -134,4 +141,6 @@ left: 100px;
 .darkmode-toggle{
 top: 40px;
 left: 100px;
+z-index: 999;
+opacity: 0.05
 }
