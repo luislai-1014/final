@@ -66,7 +66,7 @@
          * @param value
          */
         function createBox(value) {
-            //Check if there are spaces for a new box or not
+            //確認那空間是否有數字
             var emptyMatrix = 0;
             for (var i = 0; i < matrix.length; i++) {
                 if (!matrix[i].taken) {
@@ -76,7 +76,7 @@
             if (emptyMatrix === 0) {
                 return;
             }
-            //Chose an actual index (means not taken) randomly for the new box
+            //random隨機產生
             var random = Math.floor(Math.random() * emptyMatrix + 1);
             var chosenIndex = 0;
             for (var j = 0; chosenIndex < matrix.length; chosenIndex++) {
@@ -88,8 +88,8 @@
                     break;
                 }
             }
-            //Do the create job
-            value = value ? value : (Math.floor(Math.random() * 4 + 1) === 4 ? 4 : 2); //Use the value parse in or (1/4 -> 4 or  3/4 -> 2)
+            //創格
+            value = value ? value : (Math.floor(Math.random() * 4 + 1) === 4 ? 4 : 2); //產生2，4的機率 現為1/4。
             var newBox = $('<div>').addClass('box').attr({
                 position: chosenIndex,
                 value: value
