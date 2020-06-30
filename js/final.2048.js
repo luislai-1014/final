@@ -169,22 +169,6 @@
             return true;
         }
 
-        /**
-         * Game run
-         * @param dir
-         */
-        function gameRun(dir) {
-            if (isGameOver) {
-                return;
-            }
-            if (run(dir)) {
-                createBox();
-            }
-            if (gameOver()) {
-                isGameOver = true; //彈出視窗
-                alert("遊戲結束，按F5重新整理或點選右方按鈕重新遊戲");
-            }
-        }
 
         /**
          *連結上下左右鍵37~40 
@@ -242,15 +226,27 @@
             });
         }
 
+        function gameRun(dir) {
+            if (isGameOver) {
+                return;
+            }
+            if (run(dir)) {
+                createBox();
+            }
+            if (gameOver()) {
+                isGameOver = true; //顯示彈出視窗
+                alert("遊戲結束，按F5重新整理或點選右方按鈕重新遊戲");
+            }
+        }
+
         /**
          * 移動
          * @param dir
          * @returns {boolean}
          */
         function run(dir) {
-            var isMoved = false; //This is to indicate that if the game actually moved after calling this function
+            var isMoved = false; //數字的移動、確認
             var i, j, k, empty, _empty, position, value1, value2, temp; 
-            //Reset the matrix attr 'combined' before moving
             for (i = 0; i < 16; i++) {
                 matrix[i].combined = false;
             }
@@ -535,4 +531,3 @@
     };
 
 })(jQuery);
-
